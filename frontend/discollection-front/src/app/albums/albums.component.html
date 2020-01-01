@@ -1,0 +1,38 @@
+<div class="card border-secondary mb-3">
+  <div class="card-header">Albums</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Listado de albums</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button" [routerLink] ="['/albums/form']">Añadir Album</button>
+
+    </div>
+
+
+    <table class="table table-table-bordered table-striped text-secondary">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>titulo</th>
+          <th>sello</th>
+          <th>referencia</th>
+          <th>artista</th>
+          <th>lanzamiento</th>
+          <th>createAt</th>
+          <th>updateAt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let album of albums">
+          <td>{{ album.id }}</td>
+          <td>{{ album.titulo }}</td>
+          <td>{{ album.sello }}</td>
+          <td>{{ album.referencia }}</td>
+          <td>{{ album.artista }}</td>
+          <td>{{ album.lanzamiento }}</td>
+          <td>{{ album.createAt }}</td>
+          <td>{{ album.updateAt }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
